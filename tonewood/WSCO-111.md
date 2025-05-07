@@ -1,15 +1,16 @@
 ---
-id: {{title}}
-type: 
-template: 
-maker: 
-model: 
-provenance: 
-an: 
-build_quality: 
-owner: 
-sn: 
+id: WSCO-111
+type: violin
+template: 4/4 Stradivarious
+maker: null
+model: null
+provenance: null
+an: null
+build_quality: student
+owner: WSCO
+sn: null
 on_bench: false
+title: WSCO-111
 ---
 
 # Properties
@@ -27,7 +28,7 @@ ID: `= this.id`
 
 # Adjustments
 
-[[tonewood/WSCO-111-2025-05-04-notes]]
+[[WSCO-111-2024-06-13-notes]]
 
 # Condition
 
