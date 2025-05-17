@@ -7,4 +7,5 @@ gem "jekyll-default-layout"
 gem "jekyll-relative-links"
 gem "jekyll-readme-index"
 gem "jekyll-titles-from-headings"
+gem "jekyll-image-size"
 #gem "jekyll-katex"  # Optional, the package that enables KaTeX math rendering
