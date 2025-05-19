@@ -1,0 +1,20 @@
+
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "framework": "jekyll",
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "sec-fetch-mode",
+                    "value": "no-cors"
+                },
+                {
+                    "key": "sec-fetch-site",
+                    "value": "cross-site"
+                }
+            ]
+        }
+    ]
+}
