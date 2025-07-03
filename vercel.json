@@ -4,7 +4,7 @@
     "framework": "jekyll",
     "headers": [
         {
-            "source": "/(.*)",
+            "source": "/(.*)", #https://drive.usercontent.google.com
             "headers": [
                 {
                     "key": "sec-fetch-mode",
