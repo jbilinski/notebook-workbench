@@ -7,6 +7,18 @@
             "source": "/(.*)", 
             "headers": [
                 {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://drive.usercontent.google.com"
+                },
+                {
+                  "key": "Access-Control-Allow-Methods",
+                  "value": "GET,OPTIONS"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Content-Type"
+                },
+                {
                     "key": "sec-fetch-mode",
                     "value": "no-cors"
                 },
