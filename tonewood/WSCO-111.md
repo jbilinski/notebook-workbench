@@ -1,7 +1,7 @@
 ---
 id: WSCO-111
 type: violin
-template: 4/4 Stradivarious
+template: 4/4 Stradivarius
 maker: null
 model: null
 provenance: null
