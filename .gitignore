@@ -1,0 +1,43 @@
+# Jekyll specific files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+Gemfile.lock
+
+# Ruby specific files
+*.gem
+*.rbc
+.ruby-version
+.ruby-gemset
+.yardoc
+.yarn-integrity
+node_modules/
+coverage/
+pkg/
+log/
+tmp/
+byebug_history
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS system files
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.fseventsd
+
+# General editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
