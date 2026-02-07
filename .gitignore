@@ -41,3 +41,4 @@ Icon?
 .idea/
 .vscode/
 *.code-workspace
+.DS_Store
