@@ -39,6 +39,5 @@ Icon?
 *.swo
 *~
 .idea/
-.vscode/
 *.code-workspace
 .DS_Store

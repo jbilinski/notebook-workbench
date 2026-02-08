@@ -2,20 +2,20 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Create New Instrument",
+      "label": "Create New Viol",
       "type": "shell",
       "command": "code",
       "args": [
-        "${workspaceFolder}/tonewood/${input:library}/${input:instrumentId}.md"
+        "${workspaceFolder}/tonewood/${input:library}/${input:violId}.md"
       ],
       "problemMatcher": []
     },
     {
-      "label": "Create New Repair Log",
+      "label": "Create New Adjustment Log",
       "type": "shell",
       "command": "code",
       "args": [
-        "${workspaceFolder}/tonewood/${input:library}/logs/${input:date}-${input:instrumentId}-${input:description}.md"
+        "${workspaceFolder}/tonewood/${input:library}/logs/${input:date}-${input:violId}-${input:description}.md"
       ],
       "problemMatcher": []
     }
@@ -24,12 +24,12 @@
     {
       "id": "library",
       "type": "promptString",
-      "description": "Library/Org short name"
+      "description": "Library name"
     },
     {
-      "id": "instrumentId",
+      "id": "violId",
       "type": "promptString",
-      "description": "Instrument ID"
+      "description": "Viol ID"
     },
     {
       "id": "date",
