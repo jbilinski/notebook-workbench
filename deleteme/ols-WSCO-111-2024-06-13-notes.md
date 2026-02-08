@@ -1,8 +1,8 @@
 ---
 date: 2024-06-14T00:01:56.000Z
 tags:
-    - WSCO-111
-    - WSCO
+
+
 ---
 # tonewood/WSCO-111-2024-06-13-notes
 

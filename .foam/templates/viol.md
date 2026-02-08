@@ -16,7 +16,7 @@ library: ""
 sn: ""
 status: on-bench
 initial_inspection_date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE 
-tags: []
+tags: [viol]
 ---
 # ${1:instrument-id}
 

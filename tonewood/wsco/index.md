@@ -14,8 +14,7 @@ This library contains instruments for West Seattle Community Orchestras.
 
 <!-- List your instruments here with wiki links -->
 
-- [[WSCO-111]] - WSCO-111
-- [[instrument-id-2]] - Description
+- [[./wsco-111]] - Description
 
 ## Active Repairs
 
