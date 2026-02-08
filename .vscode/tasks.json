@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create New Instrument",
+      "type": "shell",
+      "command": "code",
+      "args": [
+        "${workspaceFolder}/tonewood/${input:library}/${input:instrumentId}.md"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Create New Repair Log",
+      "type": "shell",
+      "command": "code",
+      "args": [
+        "${workspaceFolder}/tonewood/${input:library}/logs/${input:date}-${input:instrumentId}-${input:description}.md"
+      ],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "library",
+      "type": "promptString",
+      "description": "Library/Org short name"
+    },
+    {
+      "id": "instrumentId",
+      "type": "promptString",
+      "description": "Instrument ID"
+    },
+    {
+      "id": "date",
+      "type": "promptString",
+      "description": "Date (YYYY-MM-DD)",
+      "default": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}"
+    },
+    {
+      "id": "description",
+      "type": "promptString",
+      "description": "Short description"
+    }
+  ]
+}

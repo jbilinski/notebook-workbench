@@ -1,0 +1,77 @@
+{
+  "New Instrument": {
+    "prefix": "new-instrument",
+    "scope": "markdown",
+    "body": [
+      "---",
+      "type: instrument",
+      "id: ${1:instrument-id}",
+      "library: ${2:library-name}",
+      "make: ${3:Make}",
+      "model: ${4:Model}",
+      "serial: ${5:}",
+      "status: in-service",
+      "tags: []",
+      "acquired: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "---",
+      "",
+      "# $3 $4 - $2",
+      "",
+      "## Description",
+      "",
+      "${6:Description}",
+      "",
+      "## Photos",
+      "",
+      "![Main photo](./images/$1_main.jpg)",
+      "",
+      "## Current Status",
+      "",
+      "**Status**: in-service",
+      "**Last serviced**: ",
+      "",
+      "## Repair History",
+      "",
+      "$0"
+    ]
+  },
+  "New Repair Log": {
+    "prefix": "new-repair",
+    "scope": "markdown",
+    "body": [
+      "---",
+      "type: repair-log",
+      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "instrument: ${1:instrument-id}",
+      "status-change: ${2:checked-in → ready-to-deploy}",
+      "technician: Jan Bilinski",
+      "tags: [repair-log]",
+      "---",
+      "",
+      "# Repair Log: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE - [[$1]]",
+      "",
+      "## Initial Condition",
+      "",
+      "${3:Condition description}",
+      "",
+      "## Work Performed",
+      "",
+      "- [ ] ${4:Task}",
+      "",
+      "## Photos",
+      "",
+      "$0"
+    ]
+  },
+  "Photo Section": {
+    "prefix": "photos",
+    "scope": "markdown",
+    "body": [
+      "### ${1:Before/During/After}",
+      "",
+      "![${2:Description}](../images/${3:filename}.jpg)",
+      "",
+      "$0"
+    ]
+  }
+}
