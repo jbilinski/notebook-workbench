@@ -1,120 +1,205 @@
 {
-  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
-  "frontMatter.taxonomy.contentTypes": [
-    {
-      "name": "default",
-      "pageBundle": false,
-      "previewPath": null,
-      "fields": [
-        {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        },
-        {
-          "title": "id",
-          "name": "id",
-          "type": "fields",
-          "fields": [
-            {
-              "title": "{ title }",
-              "name": "{ title }",
-              "type": "datetime"
-            }
-          ]
-        },
-        {
-          "title": "type",
-          "name": "type",
-          "type": "datetime"
-        },
-        {
-          "title": "template",
-          "name": "template",
-          "type": "datetime"
-        },
-        {
-          "title": "maker",
-          "name": "maker",
-          "type": "datetime"
-        },
-        {
-          "title": "model",
-          "name": "model",
-          "type": "datetime"
-        },
-        {
-          "title": "provenance",
-          "name": "provenance",
-          "type": "datetime"
-        },
-        {
-          "title": "an",
-          "name": "an",
-          "type": "datetime"
-        },
-        {
-          "title": "build_quality",
-          "name": "build_quality",
-          "type": "datetime"
-        },
-        {
-          "title": "owner",
-          "name": "owner",
-          "type": "datetime"
-        },
-        {
-          "title": "sn",
-          "name": "sn",
-          "type": "datetime"
-        },
-        {
-          "title": "on_bench",
-          "name": "on_bench",
-          "type": "boolean"
-        }
-      ]
-    }
-  ],
-  "frontMatter.framework.id": "jekyll",
-  "frontMatter.content.publicFolder": "assets",
-  "frontMatter.preview.host": "http://localhost:4000",
-  "frontMatter.content.pageFolders": [
-    {
-      "title": "tonewood",
-      "path": "[[workspace]]/tonewood"
-    }
-  ]
-}
+     "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+     "frontMatter.framework.id": "jekyll",
+     "frontMatter.content.publicFolder": "assets",
+     "frontMatter.preview.host": "http://localhost:4000",
+     "frontMatter.content.pageFolders": [
+       {
+         "title": "tonewood",
+         "path": "[[workspace]]/tonewood"
+       }
+     ],
+     "frontMatter.taxonomy.contentTypes": [
+       {
+         "name": "viol",
+         "pageBundle": false,
+         "previewPath": null,
+         "fields": [
+           {
+             "title": "Type",
+             "name": "type",
+             "type": "string",
+             "default": "viol"
+           },
+           {
+             "title": "Instrument ID",
+             "name": "iid",
+             "type": "string",
+             "required": true
+           },
+           {
+             "title": "Size",
+             "name": "size",
+             "type": "string"
+           },
+           {
+             "title": "Tuning",
+             "name": "tuning",
+             "type": "string"
+           },
+           {
+             "title": "Template",
+             "name": "template",
+             "type": "string",
+             "default": "Stradivari repro"
+           },
+           {
+             "title": "Maker",
+             "name": "maker",
+             "type": "string"
+           },
+           {
+             "title": "Model",
+             "name": "model",
+             "type": "string",
+             "default": "N/A"
+           },
+           {
+             "title": "Provenance",
+             "name": "provenance",
+             "type": "string"
+           },
+           {
+             "title": "Anno (Year Built)",
+             "name": "anno",
+             "type": "string"
+           },
+           {
+             "title": "Build Quality",
+             "name": "build_quality",
+             "type": "choice",
+             "choices": [
+               "excellent",
+               "good",
+               "fair",
+               "poor",
+               "student-grade",
+               "professional"
+             ]
+           },
+           {
+             "title": "Top Wood",
+             "name": "top",
+             "type": "list",
+             "default": ["Split", "Spruce"]
+           },
+           {
+             "title": "Back Wood",
+             "name": "back",
+             "type": "list",
+             "default": ["Split", "Maple"]
+           },
+           {
+             "title": "Varnish",
+             "name": "varnish",
+             "type": "list"
+           },
+           {
+             "title": "Library",
+             "name": "library",
+             "type": "string"
+           },
+           {
+             "title": "Serial Number",
+             "name": "sn",
+             "type": "string"
+           },
+           {
+             "title": "Status",
+             "name": "status",
+             "type": "choice",
+             "choices": [
+               "on-bench",
+               "in-service",
+               "checked-in",
+               "in-repair",
+               "ready-to-deploy"
+             ],
+             "default": "on-bench"
+           },
+           {
+             "title": "Initial Inspection Date",
+             "name": "initial_inspection_date",
+             "type": "datetime",
+             "default": "{{now}}",
+             "isPublishDate": false
+           },
+           {
+             "title": "Tags",
+             "name": "tags",
+             "type": "tags",
+             "default": ["viol"]
+           }
+         ]
+       },
+       {
+         "name": "adjustment-log",
+         "pageBundle": false,
+         "previewPath": null,
+         "fields": [
+           {
+             "title": "Type",
+             "name": "type",
+             "type": "string",
+             "default": "adjustment-log"
+           },
+           {
+             "title": "Date",
+             "name": "date",
+             "type": "datetime",
+             "default": "{{now}}",
+             "isPublishDate": true
+           },
+           {
+             "title": "Instrument ID",
+             "name": "iid",
+             "type": "string",
+             "required": true
+           },
+           {
+             "title": "Status Change",
+             "name": "status-change",
+             "type": "string",
+             "default": "checked-in → ready-to-deploy"
+           },
+           {
+             "title": "Technician",
+             "name": "technician",
+             "type": "string",
+             "default": "Jan Bilinski"
+           },
+           {
+             "title": "Tags",
+             "name": "tags",
+             "type": "tags",
+             "default": ["adjustment-log"]
+           }
+         ]
+       },
+       {
+         "name": "library-index",
+         "pageBundle": false,
+         "previewPath": null,
+         "fields": [
+           {
+             "title": "Type",
+             "name": "type",
+             "type": "string",
+             "default": "library-index"
+           },
+           {
+             "title": "Library",
+             "name": "library",
+             "type": "string",
+             "required": true
+           },
+           {
+             "title": "Tags",
+             "name": "tags",
+             "type": "tags",
+             "default": ["library-index"]
+           }
+         ]
+       }
+     ]
+   }

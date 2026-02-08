@@ -2,30 +2,13 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Create New Viol",
+      "label": "Create New Viol (Complete)",
       "type": "shell",
-      "command": "echo",
+      "command": "bash",
       "args": [
-        "Creating new viol file at tonewood/${input:library}/${input:iid}.md"
-      ],
-      "presentation": {
-        "reveal": "silent",
-        "panel": "shared"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Create New Adjustment Log",
-      "type": "shell",
-      "command": "echo",
-      "args": [
-        "Creating adjustment log at tonewood/${input:library}/logs/${input:date}-${input:iid}-${input:description}.md"
-      ],
-      "presentation": {
-        "reveal": "silent",
-        "panel": "shared"
-      },
-      "problemMatcher": []
+        "-c",
+        "mkdir -p '${workspaceFolder}/tonewood/${input:library}/images' '${workspaceFolder}/tonewood/${input:library}/logs' && touch '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md' && code '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md'"
+      ]
     },
     {
       "label": "Create Library Folder Structure",

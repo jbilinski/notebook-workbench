@@ -1,7 +1,7 @@
 ---
 type: adjustment-log
 date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE
-iid: $1
+iid: ${1:instrument-id}
 status-change: checked-in → ready-to-deploy
 technician: "Jan Bilinski"
 tags: [adjustment-log]
@@ -10,7 +10,7 @@ tags: [adjustment-log]
 # Repair Log: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE - [[${1:instrument-id}]]
 
 **Date**: $date  
-**Instrument ID**: [[$1]]  
+**Instrument ID**: [[${1:instrument-id}]]  
 **Status Change**: $status-change  
 
 ---
@@ -44,12 +44,12 @@ ${5:Any notes, future maintenance needs, etc.}
 
 ### Before
 
-![Before photo 1](../images/$1_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_before_01.jpg)
+![Before photo 1](../images/${1:instrument-id}_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_before_01.jpg)
 
 ### During Work
 
-![Work photo 1](../images/$1_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_work_01.jpg)
+![Work photo 1](../images/${1:instrument-id}_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_work_01.jpg)
 
 ### After
 
-![After photo 1](../images/$1_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_after_01.jpg)
+![After photo 1](../images/${1:instrument-id}_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_after_01.jpg)

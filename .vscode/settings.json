@@ -6,13 +6,7 @@
   "editor.lineHeight": 24,
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "editor.formatOnSave": false,
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": false
-    }
+    "editor.formatOnSave": false
   },
   "git.enableSmartCommit": true,
   "git.postCommitCommand": "sync",
