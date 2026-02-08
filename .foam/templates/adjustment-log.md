@@ -36,7 +36,7 @@ ${5:Any notes, future maintenance needs, etc.}
 ## Final Status
 
 **Ready to deploy**: [ ] Yes [ ] No  
-**Additional work needed**: 
+**Additional work needed**: ${6:}
 
 ---
 
@@ -53,6 +53,3 @@ ${5:Any notes, future maintenance needs, etc.}
 ### After
 
 ![After photo 1](../images/$1_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_after_01.jpg)
-
----
-
