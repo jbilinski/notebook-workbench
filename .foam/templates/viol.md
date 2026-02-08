@@ -1,6 +1,6 @@
 ---
 type: viol
-iid: $FOAM_TITLE
+iid: ${1:instrument-id}
 size: ""
 tuning: ""
 template: "Stradivari repro"
@@ -15,42 +15,42 @@ varnish: []
 library: ""
 sn: ""
 status: on-bench
-initial_inspection_date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE 
+initial_inspection_date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE 
 tags: []
 ---
-# ${0:iid}
+# ${1:instrument-id}
 
-## ${1:size} ${2:build_quality} ${3:tuning}
+## ${2:size} ${3:build_quality} ${4:tuning}
 
-${4:template} by ${5:maker} of ${6:provenance}
-**Model** ${7:model} **built** ${8:anno}
-**SN:** ${9:sn}
+${5:template} by ${6:maker} of ${7:provenance}
+**Model** ${8:model} **built** ${9:anno}
+**SN:** ${10:sn}
 
 ## Features
 
-Body: ${10:top} top, ${11:back} back
-Varnish: ${12:varnish}
+Body: ${11:top} top, ${12:back} back
+Varnish: ${13:varnish}
 
 ## Unique Details
 
-${13:unique_details}
+${14:unique_details}
 
 ## Image
 
-![Main photo](./images/$FOAM_TITLE_main.jpg)
+![Main photo](./images/${1:instrument-id}_main.jpg)
 
 ## Target Usage
 
-${14:Target for usage -- directs time, quality, and budget for repairs}
+${15:Target for usage -- directs time, quality, and budget for repairs}
 
 ## Current Condition
 
-**Status:** ${15:status}
-{16:current_condition}
+**Status:** ${16:status}
+${17:current_condition}
 
 ## Recommendations
 
-{17:recommendations}
+${18:recommendations}
 
 ## Adjustments history
 
@@ -59,4 +59,4 @@ ${14:Target for usage -- directs time, quality, and budget for repairs}
 ## Research and Notes
 
 **Origin, siblings, history**
-{18:research_and_notes}
+${19:research_and_notes}

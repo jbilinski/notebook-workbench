@@ -38,6 +38,7 @@
   "files.associations": {
     "*.md": "markdown"
   },
+  "foam.files.newNoteDirectory": "ask",
   "frontMatter.framework.id": "jekyll",
   "frontMatter.content.publicFolder": "assets",
   "frontMatter.preview.host": "http://localhost:4000",
