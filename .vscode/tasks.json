@@ -4,18 +4,50 @@
     {
       "label": "Create New Viol",
       "type": "shell",
-      "command": "code",
+      "command": "echo",
       "args": [
-        "${workspaceFolder}/tonewood/${input:library}/${input:violId}.md"
+        "Creating new viol file at tonewood/${input:library}/${input:iid}.md"
       ],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
       "problemMatcher": []
     },
     {
       "label": "Create New Adjustment Log",
       "type": "shell",
+      "command": "echo",
+      "args": [
+        "Creating adjustment log at tonewood/${input:library}/logs/${input:date}-${input:iid}-${input:description}.md"
+      ],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Create Library Folder Structure",
+      "type": "shell",
+      "command": "mkdir",
+      "args": [
+        "-p",
+        "${workspaceFolder}/tonewood/${input:library}/images",
+        "${workspaceFolder}/tonewood/${input:library}/logs"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Viol File",
+      "type": "shell",
       "command": "code",
       "args": [
-        "${workspaceFolder}/tonewood/${input:library}/logs/${input:date}-${input:violId}-${input:description}.md"
+        "${workspaceFolder}/tonewood/${input:library}/${input:iid}.md"
       ],
       "problemMatcher": []
     }
@@ -24,23 +56,24 @@
     {
       "id": "library",
       "type": "promptString",
-      "description": "Library name"
+      "description": "Library name (e.g., elementary-school-a)",
+      "default": ""
     },
     {
-      "id": "violId",
+      "id": "iid",
       "type": "promptString",
-      "description": "Viol ID"
+      "description": "Instrument ID (iid) - e.g., yamaha-yvc-001"
     },
     {
       "id": "date",
       "type": "promptString",
       "description": "Date (YYYY-MM-DD)",
-      "default": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}"
+      "default": "2025-02-07"
     },
     {
       "id": "description",
       "type": "promptString",
-      "description": "Short description"
+      "description": "Short description (e.g., bridge-adjustment)"
     }
   ]
 }
