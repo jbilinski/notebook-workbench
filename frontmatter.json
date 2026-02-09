@@ -69,22 +69,20 @@
              "name": "build_quality",
              "type": "choice",
              "choices": [
-               "excellent",
-               "good",
-               "fair",
-               "poor",
-               "student-grade",
+               "VSO",
+               "conservatory",
+               "student",
                "professional"
              ]
            },
            {
-             "title": "Top Wood",
+             "title": "Top Plate",
              "name": "top",
              "type": "list",
              "default": ["Split", "Spruce"]
            },
            {
-             "title": "Back Wood",
+             "title": "Back Plate",
              "name": "back",
              "type": "list",
              "default": ["Split", "Maple"]
@@ -112,8 +110,6 @@
                "on-bench",
                "in-service",
                "checked-in",
-               "in-repair",
-               "ready-to-deploy"
              ],
              "default": "on-bench"
            },
@@ -160,7 +156,7 @@
              "title": "Status Change",
              "name": "status-change",
              "type": "string",
-             "default": "checked-in → ready-to-deploy"
+             "default": "on-bench → checked-in"
            },
            {
              "title": "Technician",
