@@ -82,5 +82,6 @@
     }
   ],
   "foam.completion.label": "identifier",
-  "foam.files.newNoteDirectory": "ask"
+  "foam.files.newNoteDirectory": "ask",
+  "frontMatter.content.pageFolders": []
 }
