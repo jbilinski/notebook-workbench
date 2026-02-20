@@ -107,11 +107,12 @@
              "name": "status",
              "type": "choice",
              "choices": [
+               "checked-in",
                "on-bench",
                "in-service",
-               "checked-in",
+               "deployed"
              ],
-             "default": "on-bench"
+             "default": "checked-in"
            },
            {
              "title": "Initial Inspection Date",
@@ -156,7 +157,7 @@
              "title": "Status Change",
              "name": "status-change",
              "type": "string",
-             "default": "on-bench → checked-in"
+             "default": "checked-in → on-bench"
            },
            {
              "title": "Technician",

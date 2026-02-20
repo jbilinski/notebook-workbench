@@ -1,17 +1,17 @@
 ---
 type: adjustment-log
-date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE
+date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
 iid: ${1:instrument-id}
-status-change: checked-in → ready-to-deploy
+status-change: checked-in → on-bench
 technician: "Jan Bilinski"
 tags: [adjustment-log]
 ---
 
-# Repair Log: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE - [[${1:instrument-id}]]
+# Repair Log: {{ page.date }} - [[${1:instrument-id}]]
 
-**Date**: $date  
-**Instrument ID**: [[${1:instrument-id}]]  
-**Status Change**: $status-change  
+**Date**: {{ page.date }}
+**Instrument ID**: [[${1:instrument-id}]]
+**Status Change**: {{ page.status-change }}
 
 ---
 
@@ -35,7 +35,7 @@ ${5:Any notes, future maintenance needs, etc.}
 
 ## Final Status
 
-**Ready to deploy**: [ ] Yes [ ] No  
+**Ready to deploy**: [ ] Yes [ ] No
 **Additional work needed**: ${6:}
 
 ---
@@ -44,12 +44,12 @@ ${5:Any notes, future maintenance needs, etc.}
 
 ### Before
 
-![Before photo 1](../images/${1:instrument-id}_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_before_01.jpg)
+![Before photo 1](../images/${1:instrument-id}_before_01.jpg)
 
 ### During Work
 
-![Work photo 1](../images/${1:instrument-id}_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_work_01.jpg)
+![Work photo 1](../images/${1:instrument-id}_work_01.jpg)
 
 ### After
 
-![After photo 1](../images/${1:instrument-id}_$CURRENT_YEAR$CURRENT_MONTH${CURRENT_DATE}_after_01.jpg)
+![After photo 1](../images/${1:instrument-id}_after_01.jpg)

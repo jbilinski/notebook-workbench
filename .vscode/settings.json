@@ -17,71 +17,40 @@
   "markdown.preview.breaks": true,
   "markdown.extension.toc.levels": "2..6",
   "markdown.styles": [".vscode/custom-tag-style.css"],
+  "markdown.copyFiles.destination": {
+    "**/logs/**": "../images/${fileName}",
+    "**": "./images/${fileName}"
+  },
+  "markdown.copyFiles.overwriteBehavior": "nameIncrementally",
   "pasteImage.path": "${currentFileDir}/images",
   "pasteImage.basePath": "${currentFileDir}",
   "pasteImage.prefix": "./",
   "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
   "pasteImage.namePrefix": "${currentFileNameWithoutExt}_",
   "foam.edit.linkReferenceDefinitions": "off",
+  "foam.completion.label": "identifier",
+  "foam.files.newNoteDirectory": "currentDir",
+  "foam.files.noteExtensions": ["md"],
   "search.exclude": {
     "**/node_modules": true,
     "**/.git": true,
     "**/dist": true,
-    "**/.next": true
+    "**/.next": true,
+    "**/_site": true
   },
   "files.associations": {
     "*.md": "markdown"
   },
-  "frontMatter.framework.id": "jekyll",
-  "frontMatter.content.publicFolder": "assets",
-  "frontMatter.preview.host": "http://localhost:4000",
-  "frontMatter.taxonomy.contentTypes": [
-    {
-      "name": "default",
-      "pageBundle": false,
-      "previewPath": null,
-      "fields": [
-        {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        }
-      ]
-    }
-  ],
-  "foam.completion.label": "identifier",
-  "foam.files.newNoteDirectory": "ask",
-  "frontMatter.content.pageFolders": []
+  "cSpell.words": [
+    "wsco",
+    "viol",
+    "Seidel",
+    "Glaesel",
+    "Stradivari",
+    "tonewood",
+    "iid",
+    "anno",
+    "provenance",
+    "wikilink"
+  ]
 }

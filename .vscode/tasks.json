@@ -7,17 +7,16 @@
       "command": "bash",
       "args": [
         "-c",
-        "mkdir -p '${workspaceFolder}/tonewood/${input:library}/images' '${workspaceFolder}/tonewood/${input:library}/logs' && touch '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md' && code '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md'"
+        "mkdir -p '${workspaceFolder}/tonewood/${input:library}/images' '${workspaceFolder}/tonewood/${input:library}/logs' && touch '${workspaceFolder}/tonewood/${input:library}/images/.gitkeep' '${workspaceFolder}/tonewood/${input:library}/logs/.gitkeep' '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md' && code '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md'"
       ]
     },
     {
       "label": "Create Library Folder Structure",
       "type": "shell",
-      "command": "mkdir",
+      "command": "bash",
       "args": [
-        "-p",
-        "${workspaceFolder}/tonewood/${input:library}/images",
-        "${workspaceFolder}/tonewood/${input:library}/logs"
+        "-c",
+        "mkdir -p '${workspaceFolder}/tonewood/${input:library}/images' '${workspaceFolder}/tonewood/${input:library}/logs' && touch '${workspaceFolder}/tonewood/${input:library}/images/.gitkeep' '${workspaceFolder}/tonewood/${input:library}/logs/.gitkeep'"
       ],
       "presentation": {
         "reveal": "always",
@@ -51,7 +50,7 @@
       "id": "date",
       "type": "promptString",
       "description": "Date (YYYY-MM-DD)",
-      "default": "2025-02-07"
+      "default": ""
     },
     {
       "id": "description",

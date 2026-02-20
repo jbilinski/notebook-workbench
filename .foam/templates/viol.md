@@ -14,26 +14,24 @@ back: [Split, Maple]
 varnish: []
 library: ""
 sn: ""
-status: on-bench
-initial_inspection_date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE 
+status: checked-in
+initial_inspection_date: $FOAM_DATE_YEAR-$FOAM_DATE_MONTH-$FOAM_DATE_DATE
 tags: [viol]
 ---
-# ${1:instrument-id}
+# {{ page.iid }}
 
-## ${2:size} ${3:build_quality} ${4:tuning}
+## {{ page.size }} {{ page.build_quality }} {{ page.tuning }}
 
-${5:template} by ${6:maker} of ${7:provenance}
-**Model** ${8:model} **built** ${9:anno}
-**SN:** ${10:sn}
+{{ page.template }} by {{ page.maker }} of {{ page.provenance }}
+**Model** {{ page.model }} **built** {{ page.anno }}
+**SN:** {{ page.sn }}
 
 ## Features
 
-Body: ${11:top} top, ${12:back} back
-Varnish: ${13:varnish}
+Body: {{ page.top | join: " " }} top, {{ page.back | join: " " }} back
+Varnish: {{ page.varnish | join: ", " }}
 
 ## Unique Details
-
-${14:unique_details}
 
 ## Image
 
@@ -41,16 +39,11 @@ ${14:unique_details}
 
 ## Target Usage
 
-${15:Target for usage -- directs time, quality, and budget for repairs}
-
 ## Current Condition
 
-**Status:** ${16:status}
-${17:current_condition}
+**Status:** {{ page.status }}
 
 ## Recommendations
-
-${18:recommendations}
 
 ## Adjustments history
 
@@ -58,5 +51,4 @@ ${18:recommendations}
 
 ## Research and Notes
 
-**Origin, siblings, history**
-${19:research_and_notes}
+### Origin, siblings, history
