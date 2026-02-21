@@ -27,7 +27,7 @@
   "pasteImage.prefix": "./",
   "pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
   "pasteImage.namePrefix": "${currentFileNameWithoutExt}_",
-  "foam.edit.linkReferenceDefinitions": "off",
+  "foam.edit.linkReferenceDefinitions": "withExtensions",
   "foam.completion.label": "identifier",
   "foam.files.newNoteDirectory": "currentDir",
   "foam.files.noteExtensions": ["md"],
