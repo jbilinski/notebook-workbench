@@ -1,0 +1,23 @@
+<nav class="breadcrumbs">
+{% case page.type %}
+  {% when 'library-index' %}
+    {% if page.library %}
+      <a href="/">Home</a> › <a href="/tonewood/">Libraries</a>
+    {% else %}
+      <a href="/">Home</a>
+    {% endif %}
+
+  {% when 'viol' %}
+    <a href="/">Home</a> › <a href="/tonewood/">Libraries</a> › <a href="/tonewood/{{ page.library }}/">{{ page.library | replace: '-', ' ' }}</a>
+
+  {% when 'adjustment-log' %}
+    {% assign url_parts = page.url | split: '/' %}
+    {% assign lib = url_parts[2] %}
+    <a href="/">Home</a> › <a href="/tonewood/">Libraries</a> › <a href="/tonewood/{{ lib }}/">{{ lib | replace: '-', ' ' }}</a> › <a href="/tonewood/{{ lib }}/{{ page.iid }}">{{ page.iid }}</a>
+
+  {% else %}
+    {% unless page.url == '/' or page.url == '/index.html' %}
+      <a href="/">Home</a>
+    {% endunless %}
+{% endcase %}
+</nav>

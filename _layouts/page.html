@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include breadcrumbs.html %}
+
 {{ content }}
 
 <script type="text/javascript">
@@ -13,6 +15,10 @@ layout: default
   document.querySelectorAll("a").forEach(l => {
     if (l.href.endsWith('.md')) {
       l.href = l.href.substring(0, l.href.length-3)
+    }
+    // index pages resolve to their directory with trailing slash
+    if (l.href.endsWith('/index')) {
+      l.href = l.href.substring(0, l.href.length-5)
     }
   })
 </script>
