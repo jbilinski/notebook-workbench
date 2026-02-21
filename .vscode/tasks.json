@@ -2,26 +2,39 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Create New Viol (Complete)",
+      "label": "Create New Viol",
       "type": "shell",
       "command": "bash",
       "args": [
-        "-c",
-        "mkdir -p '${workspaceFolder}/tonewood/${input:library}/images' '${workspaceFolder}/tonewood/${input:library}/logs' && touch '${workspaceFolder}/tonewood/${input:library}/images/.gitkeep' '${workspaceFolder}/tonewood/${input:library}/logs/.gitkeep' '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md' && code '${workspaceFolder}/tonewood/${input:library}/${input:iid}.md'"
-      ]
+        "${workspaceFolder}/.vscode/scripts/create-viol.sh",
+        "${workspaceFolder}",
+        "${input:library}",
+        "${input:iid}"
+      ],
+      "problemMatcher": []
     },
     {
-      "label": "Create Library Folder Structure",
+      "label": "Create Adjustment Log",
       "type": "shell",
       "command": "bash",
       "args": [
-        "-c",
-        "mkdir -p '${workspaceFolder}/tonewood/${input:library}/images' '${workspaceFolder}/tonewood/${input:library}/logs' && touch '${workspaceFolder}/tonewood/${input:library}/images/.gitkeep' '${workspaceFolder}/tonewood/${input:library}/logs/.gitkeep'"
+        "${workspaceFolder}/.vscode/scripts/create-adjustment-log.sh",
+        "${workspaceFolder}",
+        "${input:library}",
+        "${input:iid}",
+        "${input:date}"
       ],
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Create New Library",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "${workspaceFolder}/.vscode/scripts/create-library.sh",
+        "${workspaceFolder}",
+        "${input:library}"
+      ],
       "problemMatcher": []
     },
     {
@@ -38,24 +51,18 @@
     {
       "id": "library",
       "type": "promptString",
-      "description": "Library name (e.g., elementary-school-a)",
-      "default": ""
+      "description": "Library name (e.g., wsco, elementary-school-a)"
     },
     {
       "id": "iid",
       "type": "promptString",
-      "description": "Instrument ID (iid) - e.g., yamaha-yvc-001"
+      "description": "Instrument ID (e.g., wsco-112, yamaha-yvc-001)"
     },
     {
       "id": "date",
       "type": "promptString",
-      "description": "Date (YYYY-MM-DD)",
+      "description": "Date (YYYY-MM-DD) — leave blank for today's date",
       "default": ""
-    },
-    {
-      "id": "description",
-      "type": "promptString",
-      "description": "Short description (e.g., bridge-adjustment)"
     }
   ]
 }

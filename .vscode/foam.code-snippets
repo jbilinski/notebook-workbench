@@ -124,7 +124,16 @@
       "$0"
     ]
   },
-  "Photo Section": {
+  "Photo (Viol file)": {
+    "prefix": "photo",
+    "scope": "markdown",
+    "body": [
+      "![${1:Description}](./images/${2:filename}.jpg)",
+      "",
+      "$0"
+    ]
+  },
+  "Photo Section (Log file)": {
     "prefix": "photos",
     "scope": "markdown",
     "body": [
