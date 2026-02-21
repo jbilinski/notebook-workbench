@@ -15,8 +15,11 @@ This library contains instruments for .
 <!-- Instruments are auto-added here when created via the task -->
 
 - [[violin-11]]
+
 ## Active Repairs
 
 <!-- List instruments currently in repair -->
 
 ## Notes
+
+[violin-11]: violin-11.md "Violin 11"

@@ -22,5 +22,7 @@ This library contains instruments for West Seattle Community Orchestras.
 
 ## Notes
 
-website: https://www.wscorchestras.org/ 
+website: https://www.wscorchestras.org/
+
+[wsco-111]: wsco-111.md "Wsco 111"
 
