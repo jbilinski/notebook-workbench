@@ -48,8 +48,8 @@ EOF
 # Add to top-level tonewood index
 TOP_INDEX="$WORKSPACE/tonewood/index.md"
 if [ -f "$TOP_INDEX" ]; then
-  if ! grep -q "\[\[$LIBRARY" "$TOP_INDEX"; then
-    echo "- [[$LIBRARY/index|$DISPLAY_NAME]]" >> "$TOP_INDEX"
+  if ! grep -q "$LIBRARY/index.md" "$TOP_INDEX"; then
+    echo "- [$DISPLAY_NAME]($LIBRARY/index.md)" >> "$TOP_INDEX"
   fi
 fi
 

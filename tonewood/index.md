@@ -6,8 +6,5 @@ tags: [index]
 
 ## Libraries
 
-- [[wsco/index|WSCO]] - West Seattle Community Orchestras
-- [[sps-dspa/index|Sps Dspa]]
-
-[wsco/index]: wsco/index.md "WSCO"
-[sps-dspa/index]: sps-dspa/index.md "Sps Dspa"
+- [WSCO](wsco/index.md) - West Seattle Community Orchestras
+- [SPS DSPA](sps-dspa/index.md)
