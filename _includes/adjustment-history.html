@@ -1,0 +1,10 @@
+{% assign logs = site.pages | where: 'type', 'adjustment-log' | where: 'iid', page.iid | sort: 'date' | reverse %}
+{% if logs.size > 0 %}
+<ul>
+{% for log in logs %}
+  <li><a href="{{ log.url }}">{{ log.date }}</a> — {{ log.status-change }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p><em>No adjustment logs yet.</em></p>
+{% endif %}

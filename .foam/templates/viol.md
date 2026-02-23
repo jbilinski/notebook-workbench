@@ -47,7 +47,7 @@ Varnish: {{ page.varnish | join: ", " }}
 
 ## Adjustments history
 
-<!-- Links to adjustment logs will appear here -->
+{% include adjustment-history.html %}
 
 ## Research and Notes
 

@@ -26,7 +26,7 @@ tags:
     - viol
 ---
 # {{ page.iid }}
-
+## "Vieux Onze"
 ## {{ page.size }} {{ page.build_quality }} {{ page.tuning }}
 
 {{ page.template }} by {{ page.maker }} of {{ page.provenance }}
@@ -63,7 +63,7 @@ Delicate, with some wear and repairs. It is playable but should be handled with 
 
 ## Adjustments history
 
-<!-- Links to adjustment logs will appear here -->
+{% include adjustment-history.html %}
 
 ## Research and Notes
 
